@@ -1,0 +1,2616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ISUFST San Enrique Campus Directory</title>
+
+
+<style>
+
+/* =====================================================
+   COLOR VARIABLES
+===================================================== */
+
+:root {
+
+    --navy: #071d3a;
+    --blue: #0b4f8a;
+    --light-blue: #eaf4ff;
+
+    --yellow: #f5b700;
+
+    --white: #ffffff;
+
+    --dark: #172033;
+    --gray: #64748b;
+
+    --light: #f7f9fc;
+
+    --border: #e2e8f0;
+
+    --shadow:
+        0 10px 30px rgba(7, 29, 58, 0.10);
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--light);
+
+    color: var(--dark);
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    background:
+        rgba(7, 29, 58, 0.97);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom:
+        3px solid var(--yellow);
+}
+
+
+.navbar {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 12px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+
+.logo-area img {
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border:
+        2px solid var(--yellow);
+}
+
+
+.logo-text {
+
+    line-height: 1.2;
+}
+
+
+.logo-text strong {
+
+    display: block;
+
+    font-size: 15px;
+}
+
+
+.logo-text small {
+
+    color: var(--yellow);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    padding:
+        9px 15px;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+
+    background: var(--yellow);
+
+    color: var(--navy);
+}
+
+
+.nav-links .home {
+
+    background: var(--blue);
+}
+
+
+/* =====================================================
+   HERO / ABOUT ISUFST
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(7,29,58,0.98),
+            rgba(11,79,138,0.92)
+        );
+
+    color: white;
+
+    padding:
+        85px 20px;
+
+    text-align: center;
+
+    scroll-margin-top: 100px;
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(245,183,0,0.12);
+
+    top: -100px;
+
+    right: -80px;
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    bottom: -100px;
+
+    left: -60px;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
+
+    margin-bottom: 12px;
+
+    font-weight: 800;
+}
+
+
+.hero h1 span {
+
+    color: var(--yellow);
+}
+
+
+.hero p {
+
+    font-size: 1.15rem;
+
+    color: #dbeafe;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    background: var(--yellow);
+
+    color: var(--navy);
+
+    padding:
+        12px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.hero-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* =====================================================
+   ABOUT CAMPUS
+===================================================== */
+
+.about-campus {
+
+    max-width: 1000px;
+
+    margin:
+        -30px auto 80px;
+
+    padding:
+        0 25px;
+}
+
+
+.about-content {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+
+.about-content p {
+
+    color: var(--gray);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    text-align: justify;
+}
+
+
+.about-content p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        70px 25px;
+}
+
+
+section {
+
+    margin-bottom: 90px;
+
+    scroll-margin-top: 100px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.section-heading span {
+
+    display: inline-block;
+
+    color: var(--blue);
+
+    background: var(--light-blue);
+
+    padding:
+        5px 15px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+
+.section-heading h2 {
+
+    color: var(--navy);
+
+    font-size: 28px;
+}
+
+
+.section-heading .line {
+
+    width: 55px;
+
+    height: 4px;
+
+    background: var(--yellow);
+
+    margin:
+        12px auto;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.cards {
+
+    display: grid;
+
+    gap: 25px;
+}
+
+
+.one-card {
+
+    grid-template-columns: 1fr;
+
+    max-width: 400px;
+
+    margin: auto;
+}
+
+
+.two-cards {
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.four-cards {
+
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+
+.card {
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(7,29,58,0.15);
+}
+
+
+/* CARD IMAGE */
+
+.card-image {
+
+    height: 260px;
+
+    background:
+        var(--light-blue);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.card-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 5px;
+
+    background: var(--yellow);
+}
+
+
+.card-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+
+.card:hover
+.card-image img {
+
+    transform:
+        scale(1.05);
+}
+
+
+/* CARD INFORMATION */
+
+.card-content {
+
+    padding: 22px;
+
+    text-align: center;
+}
+
+
+.position {
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+
+.card-content h3 {
+
+    color: var(--navy);
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+}
+
+
+.department {
+
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   FACULTY
+===================================================== */
+
+.faculty-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.faculty-card {
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s;
+}
+
+
+.faculty-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--yellow);
+}
+
+
+.faculty-card img {
+
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border:
+        3px solid var(--light-blue);
+}
+
+
+.faculty-info h3 {
+
+    color: var(--navy);
+
+    font-size: 15px;
+}
+
+
+.faculty-info p {
+
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   DIRECTORY LABEL
+===================================================== */
+
+.directory-label {
+
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.directory-label h3 {
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.directory-label p {
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+
+.directory-label .badge {
+
+    background: var(--yellow);
+
+    color: var(--navy);
+
+    padding:
+        7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   ACTIVITIES
+===================================================== */
+
+.activities-intro {
+
+    max-width: 850px;
+
+    margin:
+        0 auto 35px;
+
+    text-align: center;
+
+    color: var(--gray);
+}
+
+
+.activities-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ACTIVITY CARD */
+
+.activity-card {
+
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s;
+}
+
+
+.activity-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(7,29,58,0.15);
+}
+
+
+/* ACTIVITY IMAGE */
+
+.activity-image {
+
+    height: 210px;
+
+    background:
+        var(--light-blue);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.activity-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+
+.activity-card:hover
+.activity-image img {
+
+    transform:
+        scale(1.05);
+}
+
+
+/* ACTIVITY TAG */
+
+.activity-tag {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    background: var(--yellow);
+
+    color: var(--navy);
+
+    padding:
+        6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+/* ACTIVITY CONTENT */
+
+.activity-content {
+
+    padding: 22px;
+}
+
+
+.activity-content h3 {
+
+    color: var(--navy);
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+.activity-meta {
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.activity-content p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+/* DOCUMENTATION BUTTON */
+
+.documentation-button {
+
+    display: inline-block;
+
+    background: var(--navy);
+
+    color: white;
+
+    padding:
+        10px 18px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.documentation-button:hover {
+
+    background: var(--yellow);
+
+    color: var(--navy);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   ACTIVITY INFORMATION
+===================================================== */
+
+.activity-details {
+
+    margin-top: 50px;
+
+    background:
+        var(--light-blue);
+
+    border-left:
+        5px solid var(--yellow);
+
+    padding: 25px;
+
+    border-radius: 12px;
+}
+
+
+.activity-details h3 {
+
+    color: var(--navy);
+
+    margin-bottom: 10px;
+}
+
+
+.activity-details p {
+
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: var(--navy);
+
+    color: white;
+
+    text-align: center;
+
+    padding:
+        35px 20px;
+
+    border-top:
+        4px solid var(--yellow);
+}
+
+
+footer h3 {
+
+    color: var(--yellow);
+
+    margin-bottom: 5px;
+}
+
+
+footer p {
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.top-button {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--yellow);
+
+    color: var(--navy);
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.2);
+
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+
+.top-button:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .four-cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .faculty-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .activities-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        padding: 15px;
+    }
+
+
+    .nav-links {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .nav-links a {
+
+        font-size: 11px;
+
+        padding:
+            7px 10px;
+    }
+
+
+    .hero {
+
+        padding:
+            60px 20px;
+    }
+
+
+    .two-cards,
+    .four-cards,
+    .faculty-grid,
+    .activities-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .container {
+
+        padding:
+            50px 18px;
+    }
+
+
+    .about-campus {
+
+        padding:
+            0 18px;
+    }
+
+
+    .about-content {
+
+        padding: 25px;
+    }
+
+
+    .directory-label {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .activity-image {
+
+        height: 230px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION BAR
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+
+<a href="#about-isufst"
+class="logo-area">
+
+<img
+src="isufst_logo.jpg"
+alt="ISUFST Logo">
+
+
+<div class="logo-text">
+
+<strong>
+ISUFST
+</strong>
+
+<small>
+San Enrique Campus
+</small>
+
+</div>
+
+</a>
+
+
+<ul class="nav-links">
+
+
+<li>
+
+<a
+href="#about-isufst"
+class="home">
+
+About ISUFST
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#university-level">
+
+University
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#campus-level">
+
+Campus
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#deans-level">
+
+Deans
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#ccs-faculty">
+
+Faculty
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#activities">
+
+Activities
+
+</a>
+
+</li>
+
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     ABOUT ISUFST HERO
+===================================================== -->
+
+<section
+class="hero"
+id="about-isufst">
+
+
+<div class="hero-content">
+
+
+<h1>
+
+About
+<span>ISUFST</span>
+
+</h1>
+
+
+<p>
+
+San Enrique Campus
+
+</p>
+
+
+<a
+href="#university-level"
+class="hero-button">
+
+Explore Campus Directory ↓
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT CAMPUS
+===================================================== -->
+
+<section class="about-campus">
+
+
+<div class="about-content">
+
+
+<div class="section-heading">
+
+
+<span>
+About the Campus
+</span>
+
+
+<h2>
+ISUFST – San Enrique Campus
+</h2>
+
+
+<div class="line"></div>
+
+
+</div>
+
+
+<p>
+
+The Iloilo State University of Fisheries Science and
+Technology (ISUFST) – San Enrique Campus is one of the
+campuses of the university committed to providing quality
+education, developing competent students, and promoting
+innovation, leadership, and community engagement.
+
+</p>
+
+
+<p>
+
+The campus provides an environment where students can
+develop their academic knowledge, technical skills,
+leadership abilities, and values through various
+educational programs and campus activities.
+
+</p>
+
+
+<p>
+
+Through its faculty, staff, administrators, and student
+organizations, the San Enrique Campus continues to support
+students in achieving academic excellence while preparing
+them to become responsible and productive members of society.
+
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="container">
+
+
+
+<!-- =====================================================
+     UNIVERSITY ADMINISTRATION
+===================================================== -->
+
+<section id="university-level">
+
+
+<div class="section-heading">
+
+
+<span>
+Leadership
+</span>
+
+
+<h2>
+University Administration
+</h2>
+
+
+<div class="line"></div>
+
+
+</div>
+
+
+
+<div class="cards one-card">
+
+
+<article class="card">
+
+
+<div class="card-image">
+
+
+<img
+src="Dr. Nordy D. Siason, Jr., CESO VI.jpg"
+alt="Dr. Nordy D. Siason, Jr., CESO VI">
+
+
+</div>
+
+
+<div class="card-content">
+
+
+<div class="position">
+
+University President
+
+</div>
+
+
+<h3>
+
+Dr. Nordy D. Siason, Jr., CESO VI
+
+</h3>
+
+
+<p class="department">
+
+Office of the President
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CAMPUS ADMINISTRATION
+===================================================== -->
+
+<section id="campus-level">
+
+
+<div class="section-heading">
+
+
+<span>
+Campus Leadership
+</span>
+
+
+<h2>
+San Enrique Campus Administration
+</h2>
+
+
+<div class="line"></div>
+
+
+</div>
+
+
+
+<div class="cards two-cards">
+
+
+<article class="card">
+
+
+<div class="card-image">
+
+
+<img
+src="MichaelDizon.jpg"
+alt="Dr. Michael B. Dizon">
+
+
+</div>
+
+
+<div class="card-content">
+
+
+<div class="position">
+
+Campus Administrator
+
+</div>
+
+
+<h3>
+
+Dr. Michael B. Dizon
+
+</h3>
+
+
+<p class="department">
+
+Office of Campus Administration
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+
+<article class="card">
+
+
+<div class="card-image">
+
+
+<img
+src="MrsMelbyParreño.jpg"
+alt="Mrs. Melby Parreño">
+
+
+</div>
+
+
+<div class="card-content">
+
+
+<div class="position">
+
+Administrative Officer
+
+</div>
+
+
+<h3>
+
+Mrs. Melby Parreño
+
+</h3>
+
+
+<p class="department">
+
+Administrative Services Office
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     DEANS
+===================================================== -->
+
+<section id="deans-level">
+
+
+<div class="section-heading">
+
+
+<span>
+Academic Leadership
+</span>
+
+
+<h2>
+Deans of Academic Units
+</h2>
+
+
+<div class="line"></div>
+
+
+</div>
+
+
+
+<div class="cards four-cards">
+
+
+
+<article class="card">
+
+
+<div class="card-image">
+
+
+<img
+src="WendaPanes.jpg"
+alt="Dr. Wenda D. Panes">
+
+
+</div>
+
+
+<div class="card-content">
+
+
+<div class="position">
+
+Dean
+
+</div>
+
+
+<h3>
+
+Dr. Wenda D. Panes
+
+</h3>
+
+
+<p class="department">
+
+College of Information & Computing Innovation (CICI)
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+
+<article class="card">
+
+
+<div class="card-image">
+
+
+<img
+src="JaniceChing.jpg"
+alt="Dr. Janice H. Ching">
+
+
+</div>
+
+
+<div class="card-content">
+
+
+<div class="position">
+
+Dean
+
+</div>
+
+
+<h3>
+
+Dr. Janice H. Ching
+
+</h3>
+
+
+<p class="department">
+
+College of Business, Management & Sustainable Development (CBMSD)
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+
+<article class="card">
+
+
+<div class="card-image">
+
+
+<img
+src="NoliGerona.jpg"
+alt="Dr. Noli L. Gerona">
+
+
+</div>
+
+
+<div class="card-content">
+
+
+<div class="position">
+
+Dean
+
+</div>
+
+
+<h3>
+
+Dr. Noli L. Gerona
+
+</h3>
+
+
+<p class="department">
+
+College of Agriculture (COA)
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+
+<article class="card">
+
+
+<div class="card-image">
+
+
+<img
+src="ReneEstomo.jpg"
+alt="Dr. Rene T. Estomo">
+
+
+</div>
+
+
+<div class="card-content">
+
+
+<div class="position">
+
+Dean
+
+</div>
+
+
+<h3>
+
+Dr. Rene T. Estomo
+
+</h3>
+
+
+<p class="department">
+
+College of Education (COED)
+
+</p>
+
+
+</div>
+
+
+</article>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CICI FACULTY & STAFF
+===================================================== -->
+
+<section id="ccs-faculty">
+
+
+<div class="section-heading">
+
+
+<span>
+Campus Events
+</span>
+
+
+<h2>
+Acquaintance Party Activities
+</h2>
+
+
+<div class="line"></div>
+
+
+</div>
+
+
+
+<div class="activities-intro">
+
+
+<p>
+
+Explore the activities conducted during the
+Acquaintance Party. Each activity includes a brief
+description and a link to its official documentation
+stored in Google Drive.
+
+</p>
+
+
+</div>
+
+
+
+<div class="activities-grid">
+
+
+
+<!-- =================================================
+     OPENING PARADE
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="parade.jpg"
+alt="Acquaintance Party Opening Parade">
+
+
+<div class="activity-tag">
+
+Day 1
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Opening Parade
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Morning Activity
+
+</div>
+
+
+<p>
+
+The opening parade officially started the
+Acquaintance Party. Students and participants
+gathered together and showcased their creativity,
+energy, and team spirit.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =================================================
+     STREET DANCE
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="streetdance.jpg"
+alt="Street Dance Performance">
+
+
+<div class="activity-tag">
+
+Day 1
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Street Dance
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Morning Activity
+
+</div>
+
+
+<p>
+
+Students performed energetic street dance routines
+that highlighted teamwork, creativity, coordination,
+and school spirit.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =================================================
+     DANCE DRAMA
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="dancedrama.jpg"
+alt="Dance Drama Performance">
+
+
+<div class="activity-tag">
+
+Day 1
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Dance Drama
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Morning Activity
+
+</div>
+
+
+<p>
+
+A creative performance combining dance and storytelling.
+Participants presented a coordinated performance based
+on their assigned concept.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =================================================
+     LARO NG LAHI
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="laronglahi.jpg"
+alt="Laro ng Lahi">
+
+
+<div class="activity-tag">
+
+Day 1
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Laro ng Lahi
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Afternoon Activity
+
+</div>
+
+
+<p>
+
+Traditional Filipino games designed to promote
+friendship, teamwork, sportsmanship, and interaction
+among students and faculty members.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =================================================
+     DRAG RACE
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="drag-race.jpg"
+alt="Drag Race Activity">
+
+
+<div class="activity-tag">
+
+Day 2
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Drag Race
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Morning Activity
+
+</div>
+
+
+<p>
+
+An exciting competition designed to test coordination,
+speed, strategy, and teamwork among participants.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =================================================
+     BRAZILIAN ATTIRE RUNWAY
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="runway.jpg"
+alt="Brazilian Attire Runway">
+
+
+<div class="activity-tag">
+
+Day 2
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Brazilian Attire Runway
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Afternoon Activity
+
+</div>
+
+
+<p>
+
+Participants showcased creative Brazilian-inspired
+outfits while presenting confidence, creativity,
+and cultural appreciation.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =================================================
+     MR & MS AKWE
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="mr-ms-akwe.jpg"
+alt="Mr and Ms Akwe">
+
+
+<div class="activity-tag">
+
+Day 2
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Mr. & Ms. Akwe
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Afternoon Activity
+
+</div>
+
+
+<p>
+
+A special event celebrating confidence, personality,
+creativity, cultural presentation, and individuality.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =================================================
+     TEAM BUILDING
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="team-building.jpg"
+alt="Team Building Activity">
+
+
+<div class="activity-tag">
+
+Special Activity
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Team Building Activities
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Group Activity
+
+</div>
+
+
+<p>
+
+Interactive activities designed to strengthen
+communication, cooperation, leadership, friendship,
+and unity among students.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- =================================================
+     CLOSING PROGRAM
+================================================= -->
+
+<article class="activity-card">
+
+
+<div class="activity-image">
+
+
+<img
+src="closing.jpg"
+alt="Acquaintance Party Closing Program">
+
+
+<div class="activity-tag">
+
+Closing
+
+</div>
+
+
+</div>
+
+
+<div class="activity-content">
+
+
+<h3>
+
+Closing Program
+
+</h3>
+
+
+<div class="activity-meta">
+
+📅 Closing Activity
+
+</div>
+
+
+<p>
+
+The closing program concluded the Acquaintance Party
+by celebrating the memories, friendships, performances,
+and experiences shared by the participants.
+
+</p>
+
+
+<a
+href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="documentation-button">
+
+📁 View Documentation
+
+</a>
+
+
+</div>
+
+
+</article>
+
+
+</div>
+
+
+
+<!-- =================================================
+     ABOUT ACQUAINTANCE PARTY
+================================================= -->
+
+<div class="activity-details">
+
+
+<h3>
+
+About the Acquaintance Party
+
+</h3>
+
+
+<p>
+
+The Acquaintance Party provides students with an
+opportunity to meet new friends, strengthen relationships,
+develop teamwork, and participate in recreational and
+cultural activities. The activities are designed to
+encourage participation, cooperation, creativity,
+confidence, and school spirit.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+<h3>
+
+ISUFST – San Enrique Campus
+
+</h3>
+
+
+<p>
+
+Iloilo State University of Fisheries Science and Technology
+
+</p>
+
+
+<p>
+
+© 2026 Campus Organizational Directory.
+All Rights Reserved.
+
+</p>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<a
+href="#about-isufst"
+class="top-button"
+title="Back to top">
+
+↑
+
+</a>
